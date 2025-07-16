@@ -95,13 +95,17 @@ export default function QuizPage() {
     return (
       <div className="min-h-screen bg-gradient-to-br from-pink-50 to-purple-50 flex flex-col items-center justify-center px-6 py-10 text-center">
         <div className="w-36 h-36 bg-gradient-to-br from-pink-200 to-purple-200 rounded-full mb-6 flex items-center justify-center">
-          <img src="/placeholder.svg" alt="Test Logo" className="w-20 h-20 rounded-full" />
+          <img 
+            src="/placeholder.png"
+            alt="Result bunny"
+            className="w-20 h-20 rounded-full mx-auto block" 
+          />
         </div>
         <h1 className="text-2xl font-extrabold text-gray-900 mb-4">🧠 深層性格がバレるテスト</h1>
-        <p className="text-lg text-gray-700 font-medium mb-3">たった5問で、あなたの隠れた性格が丸わかり！</p>
-        <p className="text-sm text-gray-500 mb-8">質問はたった5つ。<br/>今すぐ診断してみよう！</p>
+        <p className="text-lg text-gray-700 font-medium mb-3">たった5問で、<br/>あなたの隠れた性格が丸わかり！</p>
+        <p className="text-sm text-gray-500 mb-8">今すぐ診断してみよう！</p>
         <Button className="w-full max-w-xs bg-green-500 hover:bg-green-600 text-white text-lg font-bold py-4 rounded-xl" onClick={() => setShowStart(false)}>
-          🚀 無料で性格診断スタート！
+          スタート
         </Button>
       </div>
     )
@@ -109,7 +113,14 @@ export default function QuizPage() {
 
   if (showResult) {
     const result = getPersonalityResult()
-    const shareText = encodeURIComponent(`私は${result.type}でした！深層性格診断 https://cocorotricks.com`)
+
+    const shareText = encodeURIComponent(
+      `私は${result.type}でした！${result.title}。\n` +
+      `${result.description}\n\n` +
+      `🧠 深層性格がバレるテスト\nたった5問で、あなたの隠れた性格も丸わかり！\n` +
+      `https://cocorotricks.com`
+    )
+      
     const shareUrl = `https://twitter.com/intent/tweet?text=${shareText}`
 
     return (
@@ -117,15 +128,19 @@ export default function QuizPage() {
         <Card className="w-full max-w-md mx-auto shadow-xl rounded-2xl">
           <CardContent className="p-8 text-center space-y-6">
             <div className="w-32 h-32 mx-auto bg-gradient-to-br from-pink-200 to-purple-200 rounded-full flex items-center justify-center">
-              <img src="/placeholder.svg" alt="Result bunny" className="w-20 h-20 rounded-full" />
+            <img 
+            src="/placeholder.png"
+            alt="Result bunny"
+            className="w-20 h-20 rounded-full mx-auto block" 
+            />
             </div>
             <h2 className="text-3xl font-extrabold text-gray-900">{result.type}</h2>
             <h3 className="text-lg font-semibold text-purple-600 mt-2">{result.title}</h3>
             <p className="whitespace-pre-line text-gray-700 leading-relaxed text-base">{result.description}</p>
-            <p className="text-gray-500 leading-relaxed text-sm mt-4">でも実は… あなた自身も気づいていない<br/>「隠れた強み・弱み・魅力」があるかも。<br/>詳しく知りたい方は…</p>
-            <p className="text-base text-gray-500 font-medium mt-4 leading-relaxed">🔍 あなた専用の性格レポート（無料）<br/><span className="text-base text-purple-500 font-semibold animate-bounce">👇 今すぐチェック！👇</span></p>
-            <Button className="w-full bg-green-500 hover:bg-green-600 text-white py-4 text-lg font-bold rounded-xl" onClick={() => window.open("https://line.me", "_blank")}>LINEで無料の性格レポートを見る</Button>
-            <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 text-base font-medium rounded-xl" onClick={() => window.open(shareUrl, "_blank")}>友達にも診断してもらおう！</Button>
+            <p className="text-gray-500 leading-relaxed text-sm mt-4 mb-0">「隠れた魅力…」詳しく知りたい方は…</p>
+            <p className="text-base text-gray-500 font-medium mt-0 leading-relaxed">🔍 あなた専用の性格レポート（無料）<br/><span className="text-base text-purple-500 font-semibold animate-bounce">👇 今すぐチェック！👇</span></p>
+            <Button className="w-full bg-green-500 hover:bg-green-600 text-white py-4 text-lg font-bold rounded-xl" onClick={() => window.open("https://page.line.me/768waaamp", "_blank")}>LINEで友だち追加で無料レポート</Button>
+            <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 text-base font-medium rounded-xl" onClick={() => window.open(shareUrl, "_blank")}>Xでの友達にも診断してもらおう！</Button>
             <Button variant="outline" className="w-full py-3 rounded-xl bg-white text-gray-700 font-semibold border border-gray-300" onClick={resetQuiz}>もう一度診断する</Button>
           </CardContent>
         </Card>
@@ -148,7 +163,11 @@ export default function QuizPage() {
           <CardContent className="p-8">
             <div className="text-center mb-8">
               <div className="w-24 h-24 mx-auto mb-6 bg-gradient-to-br from-pink-200 to-purple-200 rounded-full flex items-center justify-center">
-                <img src="/placeholder.svg" alt="Question bunny" className="w-16 h-16 rounded-full" />
+              <img 
+               src="/placeholder.png"
+               alt="Result bunny"
+               className="w-20 h-20 rounded-full mx-auto block" 
+              />
               </div>
               <h1 className="text-2xl font-bold text-gray-800 leading-tight">{question.question}</h1>
             </div>

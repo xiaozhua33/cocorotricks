@@ -137,10 +137,10 @@ export default function QuizPage() {
             <h2 className="text-3xl font-extrabold text-gray-900">{result.type}</h2>
             <h3 className="text-lg font-semibold text-purple-600 mt-2">{result.title}</h3>
             <p className="whitespace-pre-line text-gray-700 leading-relaxed text-base">{result.description}</p>
-            <p className="text-gray-500 leading-relaxed text-sm mt-4 mb-0">「隠れた魅力…」詳しく知りたい方は…</p>
-            <p className="text-base text-gray-500 font-medium mt-0 leading-relaxed">🔍 あなた専用の性格レポート（無料）<br/><span className="text-base text-purple-500 font-semibold animate-bounce">👇 今すぐチェック！👇</span></p>
-            <Button className="w-full bg-green-500 hover:bg-green-600 text-white py-4 text-lg font-bold rounded-xl" onClick={() => window.open("https://lin.ee/ixQEqYi", "_blank")}>LINE友だち追加無料レポート</Button>
-            <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 text-base font-medium rounded-xl" onClick={() => window.open(shareUrl, "_blank")}>Xで診断をシェア</Button>
+            <p className="text-gray-500 text-sm mb-4 mb-0 leading-none">「隠れた魅力…」詳しく知りたい方は…</p>
+            <p className="text-base text-gray-500 font-medium mt-0  leading-relaxed">🔍 性格レポート（無料） <br/><span className="text-base text-purple-500 font-semibold animate-bounce">👇 今すぐ受け取ろう！</span></p>
+            <Button className="w-full bg-green-500 hover:bg-green-600 text-white py-4 text-lg font-bold rounded-xl" onClick={() => window.open("https://lin.ee/ixQEqYi", "_blank")}>LINE友だち追加で受け取る</Button>
+            <Button className="w-full bg-black hover:bg-gray-800 text-white py-3 text-base font-medium rounded-xl" onClick={() => window.open(shareUrl, "_blank")}>Xで診断をシェア</Button>
             <Button variant="outline" className="w-full py-3 rounded-xl bg-white text-gray-700 font-semibold border border-gray-300" onClick={resetQuiz}>もう一度診断する</Button>
           </CardContent>
         </Card>

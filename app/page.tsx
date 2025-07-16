@@ -139,7 +139,7 @@ export default function QuizPage() {
             <p className="whitespace-pre-line text-gray-700 leading-relaxed text-base">{result.description}</p>
             <p className="text-gray-500 leading-relaxed text-sm mt-4 mb-0">「隠れた魅力…」詳しく知りたい方は…</p>
             <p className="text-base text-gray-500 font-medium mt-0 leading-relaxed">🔍 あなた専用の性格レポート（無料）<br/><span className="text-base text-purple-500 font-semibold animate-bounce">👇 今すぐチェック！👇</span></p>
-            <Button className="w-full bg-green-500 hover:bg-green-600 text-white py-4 text-lg font-bold rounded-xl" onClick={() => window.open("https://page.line.me/768waaamp", "_blank")}>LINEで友だち追加で無料レポート</Button>
+            <Button className="w-full bg-green-500 hover:bg-green-600 text-white py-4 text-lg font-bold rounded-xl" onClick={() => window.open("https://lin.ee/ixQEqYi", "_blank")}>LINEで友だち追加で無料レポート</Button>
             <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white py-3 text-base font-medium rounded-xl" onClick={() => window.open(shareUrl, "_blank")}>Xでの友達にも診断してもらおう！</Button>
             <Button variant="outline" className="w-full py-3 rounded-xl bg-white text-gray-700 font-semibold border border-gray-300" onClick={resetQuiz}>もう一度診断する</Button>
           </CardContent>

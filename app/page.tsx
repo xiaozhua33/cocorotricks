@@ -53,7 +53,7 @@ const questions: Question[] = [
 const personalityTypes: Record<string, PersonalityResult> = {
   intuition: { type: "🎯 直感タイプ", title: "本能で動くエネルギー型", description: "とりあえず動く！本能で動くあなたは、\n行動力にあふれています。" },
   reflection: { type: "🧩 内省タイプ", title: "感情や意味を深く考える探求型", description: "内面を大切にし、\n物事の意味を深く考えるタイプです。" },
-  logic: { type: "🧠 論理タイプ", title: "客観的に整理してから動く分析型", description: "情報を整理し分析してから行動する、\n理性的なあなた。" },
+  logic: { type: "🧠 論理タイプ", title: "客観的に整理してから動く分析型", description: "情報を整理し分析してから行動する、\n理性的なタイプです。" },
   empathy: { type: "🌊 感受タイプ", title: "他人の気持ちに敏感、共感重視型", description: "共感力が高く、\n他人の感情を大切にするタイプです。" },
 }
 
